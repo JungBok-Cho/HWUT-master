@@ -7,7 +7,7 @@ namespace HWUT.Models
     /// <summary>
     /// The Product Model
     /// </summary>
-    public class ProductModel
+    public class ProductModel 
     {
         // ID
         public string Id { get; set; }
