@@ -17,34 +17,34 @@ namespace HWUT.Models
 
         // The Image
         [JsonPropertyName("img")]
-        public string Image { get; set; }
+        public string Image { get; set; } 
         
         // URL to the item
-        public string Url { get; set; }
-        
+        public string Url { get; set; } 
+
         // Display Title
-        public string Title { get; set; }
-        
+        public string Title { get; set; } 
+
         // Display Descirption
-        public string Description { get; set; }
+        public string Description { get; set; } 
 
         // Date String
         public DateTime Date { get; set; }
 
         // The Next Stop in this tour
-        public string Sequence { get; set; }
+        public string Sequence { get; set; } 
 
         // Email
-        public string Email { get; set; }
+        public string Email { get; set; } 
 
         // Logistics
-        public string Logistics { get; set; }
+        public string Logistics { get; set; } 
 
         // Rating Array
-        public int[] Ratings { get; set; }
+        public int[] Ratings { get; set; } 
 
         // Return the json version of the data
-        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this);
+        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this); //now
 
         /// <summary>
         /// Create a new default Product

@@ -38,10 +38,411 @@ namespace UnitTests
             var result = new ProductModel();
 
             // Act
-            result.Date = new DateTime();
+            result.Date = new DateTime(2020,5,28);
 
             // Assert
-            Assert.AreEqual(DateTime.UtcNow.ToShortDateString(), result.Date.ToShortDateString());
+            Assert.AreEqual("5/28/2020", result.Date.ToShortDateString());
         }
+
+        [TestMethod]
+        public void ProductModel_Get_Id_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(null, result.Id);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Id_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Id = "testbot123";
+
+            // Assert
+            Assert.AreEqual("testbot123", result.Id);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Id_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Id = "";
+
+            // Assert
+            Assert.AreEqual("", result.Id);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Maker_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(null, result.Maker);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Maker_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Maker = "God Hand";
+
+            // Assert
+            Assert.AreEqual("God Hand", result.Maker);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Maker_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Maker = "";
+
+            // Assert
+            Assert.AreEqual("", result.Maker);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Image_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(null, result.Image);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Image_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Image = "~/img/masterpiece.jpg";
+
+            // Assert
+            Assert.AreEqual("~/img/masterpiece.jpg", result.Image);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Image_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Image = "";
+
+            // Assert
+            Assert.AreEqual("", result.Image);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Url_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(null, result.Url);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Url_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Url = "www.seattleu.edu";
+
+            // Assert
+            Assert.AreEqual("www.seattleu.edu", result.Url);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Url_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Url = "";
+
+            // Assert
+            Assert.AreEqual("", result.Url);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Title_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(null, result.Title);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Title_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Title = "Seattle U, a pretty Campus";
+
+            // Assert
+            Assert.AreEqual("Seattle U, a pretty Campus", result.Title);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Title_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Title = "";
+
+            // Assert
+            Assert.AreEqual("", result.Title);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Description_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(null, result.Description);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Description_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Description = "Wow Unit testing is so fun!";
+
+            // Assert
+            Assert.AreEqual("Wow Unit testing is so fun!", result.Description);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Description_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Description = "";
+
+            // Assert
+            Assert.AreEqual("", result.Description);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Sequence_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(null, result.Sequence);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Sequence_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Sequence = "TourStart2";
+
+            // Assert
+            Assert.AreEqual("TourStart2", result.Sequence);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Sequence_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Sequence = "";
+
+            // Assert
+            Assert.AreEqual("", result.Sequence);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Email_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual("Unknown", result.Email);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Email_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Email = "jungbok@wanna.go.out";
+
+            // Assert
+            Assert.AreEqual("jungbok@wanna.go.out", result.Email);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Email_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Email = "";
+
+            // Assert
+            Assert.AreEqual("", result.Email);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Logistics_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual("", result.Logistics);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Logistics_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Logistics = "I will pickup";
+
+            // Assert
+            Assert.AreEqual("I will pickup", result.Logistics);
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Logistics_EmptyString_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Logistics = "";
+
+            // Assert
+            Assert.AreEqual("", result.Logistics);
+        }
+
+        [TestMethod]
+        public void ProductModel_Get_Ratings_Default_Should_Pass()
+        {
+            // Arrange
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            for(int i = 0; i < result.Ratings.Length; i++) {
+                Assert.AreEqual(5, result.Ratings[i]);
+            }
+            
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Ratings_Intialization_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Ratings = new int[] { 10 };
+
+            // Assert
+            for (int i = 0; i < result.Ratings.Length; i++)
+            {
+                Assert.AreEqual(10, result.Ratings[i]);
+            }
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_Ratings_Change_Element_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Ratings[0] = 7;
+
+            // Assert
+            for (int i = 0; i < result.Ratings.Length; i++)
+            {
+                if (i == 0)
+                {
+                    Assert.AreEqual(7, result.Ratings[i]);
+                }
+                else 
+                {
+                    Assert.AreEqual(5, result.Ratings[i]);
+                }
+            }
+        }
+
+
+        // public override string ToString() => JsonSerializer.Serialize<ProductModel>(this); //now
+
     }
+
 }
