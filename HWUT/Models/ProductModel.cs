@@ -44,7 +44,7 @@ namespace HWUT.Models
         public int[] Ratings { get; set; } 
 
         // Return the json version of the data
-        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this); //now
+        public override string ToString() => JsonSerializer.Serialize<ProductModel>(this); 
 
         /// <summary>
         /// Create a new default Product
@@ -66,7 +66,7 @@ namespace HWUT.Models
             Ratings = new int[] { 5 };
         }
 
-        public int AverageRating()
+        public int AverageRating()    //now
         {
             if (Ratings == null)
             {

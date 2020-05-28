@@ -402,7 +402,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Ratings_Intialization_Should_Pass()
+        public void ProductModel_Set_Ratings_AfterIntialization_Should_Pass()
         {
             // Arrange
             var result = new ProductModel();
@@ -418,7 +418,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void ProductModel_Set_Ratings_Change_Element_Should_Pass()
+        public void ProductModel_Set_Ratings_ChangeElement_Should_Pass()
         {
             // Arrange
             var result = new ProductModel();
@@ -441,7 +441,124 @@ namespace UnitTests
         }
 
 
-        // public override string ToString() => JsonSerializer.Serialize<ProductModel>(this); //now
+        [TestMethod]
+        public void ProductModel_Set_ToString_Default_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+            var result2 = new ProductModel();
+
+            // Act
+            result.Date = new DateTime(2020, 05, 28);
+            result2.Date = new DateTime(2020, 05, 28);
+
+            // Assert
+            Assert.AreEqual(result.ToString(), result2.ToString());
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_ToString_AfterIntialization_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+            var result2 = new ProductModel();
+
+            // Act
+            result.Date = new DateTime(2020, 05, 28);
+            result2.Date = new DateTime(2020, 05, 28);
+            result.Url = "www.seattleu.edu";
+            result2.Url = "www.seattleu.edu";
+            result.Maker = "God Hand";
+            result2.Maker = "God Hand";
+
+            // Assert
+            Assert.AreEqual(result.ToString(), result2.ToString());
+        }
+        
+
+        [TestMethod]
+        public void ProductModel_Set_ToString_NotEqual_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+            var result2 = new ProductModel();
+
+            // Act
+            result.Date = new DateTime(2020, 05, 28);
+            result2.Date = new DateTime(2020, 05, 28);
+            result.Ratings[0] = 7;
+
+            // Assert
+            Assert.AreNotEqual(result.ToString(), result2.ToString());
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_AverageRating_Default_Should_Pass()
+        {
+            // Arrange
+
+
+            // Act
+            var result = new ProductModel();
+
+            // Assert
+            Assert.AreEqual(5, result.AverageRating());
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_AverageRating_RatingIsNull_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Ratings = null;
+
+            // Assert
+            Assert.AreEqual(0, result.AverageRating());
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_AverageRating_RatingIsEmpty_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Ratings = new int[] { };
+
+            // Assert
+            Assert.AreEqual(0, result.AverageRating());
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_AverageRating_TotalIsZero_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            for (int i = 0; i < result.Ratings.Length; i++)
+            {
+                result.Ratings[i] = 0;
+            }
+
+            // Assert
+            Assert.AreEqual(0, result.AverageRating());
+        }
+
+        [TestMethod]
+        public void ProductModel_Set_AverageRating_AfterInitialization_Should_Pass()
+        {
+            // Arrange
+            var result = new ProductModel();
+
+            // Act
+            result.Ratings = new int[] { 7 };
+
+            // Assert
+            Assert.AreEqual(7, result.AverageRating());
+        }
 
     }
 
